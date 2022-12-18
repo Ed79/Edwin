@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<HTML>
 <head>
-<title>Page Title</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
+	<title>Home</title>
+	<style type="text/css">
+     {
   box-sizing: border-box;
 }
 
 body {
+background-color: black;
+  color: white;
   font-family: Didot;
   margin: 0;
 }
@@ -32,63 +33,37 @@ body {
   font-size: 60px;
 }
 
-/* Style the top navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
+		
 
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: gray;
+    }
 
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
+    .navbar li {
+      float: left;
+    }
 
-/* Change color on hover */
-.navbar a:hover {
-  background-color: black;
-  color: gold;
-}
+    .navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
 
-/* Column container */
-.row {  
-  display: flex;
-  flex-wrap: wrap;
-}
+    .navbar li a:hover {
+      background-color: gold;
+    }
 
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  flex: 30%;
-  background-color: Black;
-  padding: 20px;
-  color: white
-}
-/* Main column */
-.main {   
-  flex: 70%;
-  background-color: black;
-  padding: 20px;
-  color: white;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-</style>
+    .navbar .active {
+      background-color: white;
+      color: Black;
+    }
+	</style>
 </head>
 <body>
 
@@ -97,12 +72,12 @@ body {
   <p>Welcome To My Wo(rk)(ld)</p>
 </div>
 
-<div class="navbar">
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Projects</a>
-  <a href="#" class="right">Contact</a>
-</div>
+<ul class="navbar">
+  <li><a  class= 'active'  href="index.html">Home</a></li>
+  <li><a href="pages/about.html">About</a></li>
+  <li><a href="pages/projects.html">Projects</a></li>
+  <li><a href="pages/contact.html" class="right">Contact</a></li>
+</ul>
 
 <div class="row">
   <div class="side">
