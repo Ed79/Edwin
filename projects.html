@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <style>
+      /* Add styles for the page */
+      body {
+        background-color: black;
+      }
+      .project {
+        /* Add styles for each project */
+        width: 80%;
+        margin: 0 auto;
+        border: 1px solid white;
+        box-sizing: border-box;
+        transition: transform 0.2s;
+      }
+      .project:hover {
+        /* Add styles for the pop out feature when a project is hovered over */
+        transform: scale(1.1);
+        box-shadow: 0 0 10px white;
+      }
+      .project-header {
+        /* Add styles for the header of each project */
+        color: white;
+        font-size: 1.5em;
+        text-align: center;
+        margin: 20px 0;
+      }
+      .project-description {
+        /* Add styles for the description of each project */
+        color: white;
+        font-size: 1em;
+        margin: 20px;
+      }
+      .project-media {
+        /* Add styles for the image or video section of each project */
+        display: flex;
+        justify-content: center;
+      }
+      .project-media img,
+      .project-media video {
+        /* Add styles for images and videos within the project media section */
+        width: 80%;
+        height: auto;
+      }
+      
+      
+      
+  
+    .navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: gray;
+      }
+  
+      .navbar li {
+        float: left;
+      }
+  
+      .navbar li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+  
+      .navbar li a:hover {
+        background-color: gold;
+      }
+  
+      .navbar .active {
+        background-color: white;
+        color: Black;
+   
+    </style>
+  </head>
+  <body>
+   <ul class="navbar">
+   <li><a href="./index.html">Home</a></li>
+  <li><a href="./about.html">About</a></li>
+  <li><a  class= 'active'  href="./projects.html">Projects</a></li>
+    <li><a href="./contact.html" class="right">Contact</a></li>
+  </ul>
+  
+  
+    <!-- Add a header for the portfolio page -->
+    <h1 style="color: white; text-align: center;">My Portfolio</h1>
+    
+    
+    <!-- Add a container for the projects -->
+    <div class="project-container">
+      <!-- Add a section for each project -->
+      <div class="project">
+        <!-- Add a header for the project -->
+        <h2 class="project-header">Project 1</h2>
+        <!-- Add a description for the project -->
+        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+        <!-- Add a section for images or videos for the project -->
+        <div class="project-media">
+          <!-- Add an image for the project -->
+          <img src="project1.jpg" alt="Project 1 image">
+        </div>
+      </div>
+      <div class="project">
+        <h2 class="project-header">Project 2</h2>
+        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+        <div class="
