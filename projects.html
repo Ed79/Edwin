@@ -1,41 +1,64 @@
 <html>
   <head>
     <style>
-      /* Add styles for the page */
       body {
         background-color: black;
       }
-      .project {
-        /* Add styles for each project */
+      
+      .project-box {
+        /* Add styles for each project box */
         width: 80%;
         margin: 0 auto;
         border: 1px solid white;
         box-sizing: border-box;
         transition: transform 0.2s;
       }
-      .project:hover {
-        /* Add styles for the pop out feature when a project is hovered over */
+      
+      .project-box.rotated {
+        /* Add styles for the spinning animation */
+        transform: rotateY(360deg);
+        transition: transform 0.2s;
+      }
+      
+      .project-box.rotated .project {
+        color: black;
+      }
+      
+      .project-box.rotated .project-description {
+        color: black;
+      }
+      
+      .project-box:hover {
+        /* Add styles for the pop out feature when a project box is hovered over */
         transform: scale(1.1);
         box-shadow: 0 0 10px white;
       }
-      .project-header {
-        /* Add styles for the header of each project */
+      
+      .project {
+        /* Add styles for each project */
         color: white;
         font-size: 1.5em;
         text-align: center;
         margin: 20px 0;
+        cursor: pointer;
       }
+      
       .project-description {
         /* Add styles for the description of each project */
         color: white;
         font-size: 1em;
         margin: 20px;
+        visibility: visible; /* Change this to show the descriptions by default */
       }
+      
       .project-media {
         /* Add styles for the image or video section of each project */
         display: flex;
         justify-content: center;
+        visibility: visible; /* Change this to hide the images by default */
       }
+      
+      
       .project-media img,
       .project-media video {
         /* Add styles for images and videos within the project media section */
@@ -43,21 +66,18 @@
         height: auto;
       }
       
-      
-      
-  
-    .navbar {
+      .navbar {
         list-style-type: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
         background-color: gray;
       }
-  
+      
       .navbar li {
         float: left;
       }
-  
+      
       .navbar li a {
         display: block;
         color: white;
@@ -65,45 +85,186 @@
         padding: 14px 16px;
         text-decoration: none;
       }
-  
+      
       .navbar li a:hover {
         background-color: gold;
       }
-  
+      
       .navbar .active {
         background-color: white;
         color: Black;
-   
+      }
     </style>
   </head>
   <body>
-   <ul class="navbar">
-   <li><a href="./index.html">Home</a></li>
-  <li><a href="./about.html">About</a></li>
-  <li><a  class= 'active'  href="./projects.html">Projects</a></li>
-    <li><a href="./contact.html" class="right">Contact</a></li>
-  </ul>
-  
-  
+
     <!-- Add a header for the portfolio page -->
-    <h1 style="color: white; text-align: center;">My Portfolio</h1>
-    
-    
+    <h1 style="color: white; text-align: center;">My Personal Projects Portfolio</h1>
+    <ul class="navbar">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a class="active" href="./projects.html">Projects</a></li>
+      <li><a href="./contact.html" class="right">Contact</a></li>
+    </ul>
+  
+
+  
     <!-- Add a container for the projects -->
     <div class="project-container">
-      <!-- Add a section for each project -->
-      <div class="project">
+      <!-- Add a box for each project -->
+      <div class="project-box">
         <!-- Add a header for the project -->
-        <h2 class="project-header">Project 1</h2>
+        <h2 class="project">3D Printing</h2>
+        <!-- Add a button for the project -->
+       
         <!-- Add a description for the project -->
-        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+        <p class="project-description" style="visibility: visible;">
+          From 2019-2021 I designed and 3D printed custom phone cases for individuals and processed them through my own E-commerce site called Transcending Cases, please see some images below:
+        </p>
         <!-- Add a section for images or videos for the project -->
-        <div class="project-media">
-          <!-- Add an image for the project -->
-          <img src="project1.jpg" alt="Project 1 image">
+
+        
+        <div class="project-media" style="visibility: visible;">
+          <!-- Add an image or video for the project -->
+          <img src="https://firebasestorage.googleapis.com/v0/b/testing-54300.appspot.com/o/CFEAF1E8-6401-46CA-BBFF-E53A3ED1C6B3.JPG?alt=media&token=a215266b-2742-42b9-ba6e-72e4b37d1f77" alt="3D Printing project" style="width: 200px; height: 200px; object-fit: cover;">
+          <img src="https://firebasestorage.googleapis.com/v0/b/testing-54300.appspot.com/o/D3C39664-CAF3-42CF-8206-BB4288F62420.JPG?alt=media&token=3edd1102-6785-4a5f-842c-80ccd7053f5c" alt="3D Printing project" style="width: 200px; height: 200px; object-fit: cover;">
+          <img src="https://firebasestorage.googleapis.com/v0/b/testing-54300.appspot.com/o/PhotoRoom.app%202020-04-10%2010%3A45%3A40-0400-1586529940.790693.jpg?alt=media&token=381e58e8-ceb4-49a0-bf79-c633fcdf7e5c" alt="3D Printing project" style="width: 200px; height: 200px; object-fit: cover;">
+          <img src="https://firebasestorage.googleapis.com/v0/b/testing-54300.appspot.com/o/PhotoRoom.app%202020-04-19%2000%3A20%3A29-0400-1587270029.91436.jpg?alt=media&token=9dc7f601-404b-40fc-b525-af359cf4ebb8" alt="3D Printing project" style="width: 200px; height: 200px; object-fit: cover;">
         </div>
+        
+        
       </div>
-      <div class="project">
-        <h2 class="project-header">Project 2</h2>
-        <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-        <div class="
+  
+      <!-- Add a box for the Augmented Reality project -->
+      <div class="project-box">
+        <h2 class="project">Augmented Reality</h2>
+
+        <p class="project-description" style="visibility: visible;">
+          Below are some AR ( Augmented reality ) projects that I have worked on. 
+         
+          1.The second project was designed in Unity. I created an image recognition for two picture where a video is triggered when the user places their camera on the image.
+          3. The third project was also designed in unity. I implemented facial recognition to allow users to try on different glasses before purchasing the glasses.
+  
+         
+          <video src="ScreenRecording_02-21-2022 14-57-32_1.mov" controls style="width: 350px; height: 350px;"></video>
+          
+          <video src="RPReplay_Final1650823274 2.mov" controls style="width: 350px; height: 350px;"></video>
+    
+        </p>
+        <div class="project-media" style="visibility: hidden;">
+          
+        <img src="./augmented-reality.jpg" alt="Augmented Reality project">
+        </div>
+        </div>
+
+        <!-- Add a box for the Web Development project -->
+<div class="project-box">
+  <h2 class="project">Web Development</h2>
+  
+  <p class="project-description" style="visibility: visible;">
+   This entire website was coded by me in HTML and CSS.
+  </p>
+  <div class="project-media" style="visibility: visible;">
+   
+  </div>
+</div>
+
+
+
+<div class="project-box">
+  <h2 class="project">3D Rendering</h2>
+
+  <p class="project-description" style="visibility: visible;">
+    Below are some AR projects that were rendered in Blender. Both projects are hats that were designed for a clothing brand to add to their website to create a more immersive experience for their customers.
+  </p>
+
+  <div style="float: left; margin-right: 20px;">
+    <style>
+      .augmented-reality-design {
+        width: 400px;
+        height: 400px;
+        border: none;
+      }
+    </style>
+
+    <iframe src="https://metal-wild-makemake.glitch.me/" class="augmented-reality-design"></iframe>
+  </div>
+
+  <div style="float: left;">
+    <style>
+      .augmented-reality-design {
+        width: 400px;
+        height: 400px;
+        border: none;
+      }
+    </style>
+
+    <iframe src="https://curved-hallowed-pajama.glitch.me/" class="augmented-reality-design"></iframe>
+  </div>
+
+
+  <div class="project-media" style="visibility: visible;">
+  </div>
+</div>
+
+<!-- Add a script for the toggle functions -->
+<script>
+function toggle3DPrintingDescription() {
+  // Get the description and media elements for the 3D Printing project
+  var description = document.querySelector('.project-box:nth-of-type(1) .project-description');
+  var media = document.querySelector('.project-box:nth-of-type(1) .project-media');
+
+  // Toggle the visibility of the description and media elements
+  if (description.style.visibility === 'hidden') {
+    description.style.visibility = 'visible';
+    media.style.visibility = 'visible';
+  } else {
+    description.style.visibility = 'hidden';
+    media.style.visibility = 'hidden';
+  }
+}
+
+/*function toggleAugmentedRealityDescription() {
+  // Get the description and media elements for the Augmented Reality project
+  var description = document.querySelector('.project-box:nth-of-type(2) .project-description');
+  var media = document.querySelector('.project-box:nth-of-type(2) .project-media');
+  // Toggle the visibility of the description and media elements
+if (description.style.visibility === 'hidden') {
+  description.style.visibility = 'visible';
+  media.style.visibility = 'visible';
+} else {
+  description.style.visibility = 'hidden';
+  media.style.visibility = 'hidden';
+}
+}
+
+//function toggleWebDevelopmentDescription() {
+// Get the description and media elements for the Web Development project
+var description = document.querySelector('.project-box:nth-of-type(3) .project-description');
+var media = document.querySelector('.project-box:nth-of-type(3) .project-media');
+
+// Toggle the visibility of the description and media elements
+if (description.style.visibility === 'hidden') {
+  description.style.visibility = 'visible';
+  media.style.visibility = 'visible';
+} else {
+  description.style.visibility = 'hidden';
+  media.style.visibility = 'hidden';
+}
+}
+
+function toggle3DRenderingDescription() {
+// Get the description and media elements for the 3D Rendering project
+var description = document.querySelector('.project-box:nth-of-type(4) .project-description');
+var media = document.querySelector('.project-box:nth-of-type(4) .project-media');
+// Toggle the visibility of the description and media elements
+if (description.style.visibility === 'hidden') {
+  description.style.visibility = 'visible';
+  media.style.visibility = 'visible';
+} else {
+  description.style.visibility = 'hidden';
+  media.style.visibility = 'hidden';
+}
+}
+</script>*/
+  
