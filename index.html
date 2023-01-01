@@ -10,6 +10,7 @@
       /* styles for screen widths smaller than 600px go here */
       .navbar li {
         float: none;
+        display: block; /* causes the links to stack vertically */
       }
       .images {
         display: block; /* causes the images to stack vertically */
@@ -18,15 +19,8 @@
         width: 80vw; /* scales the width of the image to 80% of the viewport width on small screens */
       }
     }
-   
     
     
-    @media only screen and (max-width: 600px) {
-      /* styles for screen widths smaller than 600px go here */
-      .images img {
-        width: 80vw; /* scales the width of the image to 80% of the viewport width on small screens */
-      }
-    }
 
     .navbar li a {
       font-size: 20px; /* increase the font size */
