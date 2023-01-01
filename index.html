@@ -7,7 +7,21 @@
 	<title>Home</title>
 	<style type="text/css">
 
+    @media only screen and (max-width: 600px) {
+      /* styles for screen widths smaller than 600px go here */
+      .navbar li {
+        float: none;
+      }
 
+      @media only screen and (max-width: 600px) {
+        /* styles for screen widths smaller than 600px go here */
+        .images {
+          display: block; /* causes the images to stack vertically */
+        }
+      }
+      
+    }
+    
     .images img {
       width: 40vw; /* scales the width of the image to 40% of the viewport width */
     }
