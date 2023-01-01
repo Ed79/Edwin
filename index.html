@@ -1,29 +1,24 @@
-
 <!DOCTYPE html>
 <HTML>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Home</title>
-	<style type="text/css">
+  <title>Home</title>
+  <style type="text/css">
 
     @media only screen and (max-width: 600px) {
       /* styles for screen widths smaller than 600px go here */
       .navbar li {
         float: none;
       }
-
-      @media only screen and (max-width: 600px) {
-        /* styles for screen widths smaller than 600px go here */
-        .images {
-          display: block; /* causes the images to stack vertically */
-        }
+      .images {
+        display: block; /* causes the images to stack vertically */
       }
-      
     }
-    
+
     .images img {
       width: 40vw; /* scales the width of the image to 40% of the viewport width */
+      max-width: 100%; /* scales the width of the image to the width of the containing element */
     }
     @media only screen and (max-width: 600px) {
       /* styles for screen widths smaller than 600px go here */
@@ -31,76 +26,11 @@
         width: 80vw; /* scales the width of the image to 80% of the viewport width on small screens */
       }
     }
-    .images img {
-      max-width: 100%; /* scales the width of the image to the width of the containing element */
-    }
+
     .navbar li a {
       font-size: 20px; /* increase the font size */
       padding: 20px; /* increase the padding */
     }
-                
-    @media only screen and (max-width: 600px) {
-      /* styles for screen widths smaller than 600px go here */
-      .navbar li {
-        float: none;
-      }
-    }
-    
-     {
-  box-sizing: border-box;
-}
-
-body {
-background-color: black;
-  color: white;
-  font-family: Didot;
-  margin: 0;
-}
-
-/* Style the header */
-.header {
-  padding: 20px;
-  text-align: center;
-  background: #09070f;
-  color: white;
-  ;
-}
-
-/* Increase the font size of the h1 element */
-.header h1 {
-  font-size: 40px;
-}
-/* Increase the font size of the h1 element */
-.header h1 {
-  font-size: 60px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-h5 {
-  font-size: 25px;
-}
-
-p {
-  font-size: 22px;
-}
-
-img {
-  transition: transform 0.5s ease;
-}
-
-img:hover {
-  transform: scale(1.1);
-}
-
-.images {
-  display: flex;
-  justify-content: space-between;
-}
-
-		
 
     .navbar {
       list-style-type: none;
@@ -130,7 +60,60 @@ img:hover {
       background-color: white;
       color: Black;
     }
-	</style>
+
+    {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      font-family: Didot;
+      margin: 0;
+    }
+
+    /* Style the header */
+    .header {
+      padding: 20px;
+      text-align: center;
+      background: #09070f;
+      color: white;
+    }
+
+    /* Increase the font size of the h1 element */
+    .header h1 {
+      font-size: 40px;
+    }
+    /* Increase the font size of the h1 element */
+    .header h1 {
+      font-size: 60px;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    h5 {
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+
+    img {
+      transition: transform 0.5s ease;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+
+    .images {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
 </head>
 <body>
 
