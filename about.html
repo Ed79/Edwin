@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <HTML>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>About Edwin</title>
 	<style type="text/css">
+		
 		body {
 			background-color: #000000;
 			color: #FFFFFF;
@@ -14,11 +16,12 @@
 			border: 1px solid #FFFFFF;
 		}
 
-		div:hover {
+		div:hover, div:active {
 			background-color: #FFFFFF;
 			color: #000000;
 			border: 1px solid #000000;
-		}
+		  }
+		  
 
   .navbar {
       list-style-type: none;
@@ -48,6 +51,29 @@
       background-color: white;
       color: Black;
     }
+
+    .images img {
+		width: 40vw; /* scales the width of the image to 40% of the viewport width */
+	  }
+	  @media only screen and (max-width: 600px) {
+		/* styles for screen widths smaller than 600px go here */
+		.images img {
+		  width: 80vw; /* scales the width of the image to 80% of the viewport width on small screens */
+		}
+	  }
+	  .images img {
+		max-width: 100%; /* scales the width of the image to the width of the containing element */
+	  }
+	  .navbar li a {
+		font-size: 20px; /* increase the font size */
+		padding: 20px; /* increase the padding */
+	  }
+				  
+	  @media only screen and (max-width: 600px) {
+		/* styles for screen widths smaller than 600px go here */
+		.navbar li {
+		  float: none;
+		}
 	</style>
 </head>
 <body>
