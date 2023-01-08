@@ -2,34 +2,11 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-      @media only screen and (max-width: 600px) {
-        /* styles for screen widths smaller than 600px go here */
-        .navbar li {
-          float: none;
+      @media (max-width: 600px) {
+        .navbar {
+          display: flex;
+          flex-direction: column;
         }
-      }
-      
-    .images img {
-      width: 40vw; /* scales the width of the image to 40% of the viewport width */
-    }
-    @media only screen and (max-width: 600px) {
-      /* styles for screen widths smaller than 600px go here */
-      .images img {
-        width: 80vw; /* scales the width of the image to 80% of the viewport width on small screens */
-      }
-    }
-    .images img {
-      max-width: 100%; /* scales the width of the image to the width of the containing element */
-    }
-    .navbar li a {
-      font-size: 20px; /* increase the font size */
-      padding: 20px; /* increase the padding */
-    }
-                
-    @media only screen and (max-width: 600px) {
-      /* styles for screen widths smaller than 600px go here */
-      .navbar li {
-        float: none;
       }
       body {
         background-color: black;
