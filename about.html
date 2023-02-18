@@ -7,9 +7,9 @@
 		
 		body {
 			/* sets the background color */
-			background-color: black;
+			background-color: #FFFFFF;
 			/* sets the color of the text */
-			color: white;
+			color: #000000;
 			/* sets the font family */
 			font-family: Didot;
 			/* removes the margin */
@@ -20,13 +20,15 @@
 		div {
 			margin: 20px;
 			padding: 10px;
-			border: 1px solid #FFFFFF;
+			border: 1px solid #000000;
 		}
 
 		div:hover, div:active {
-			background-color: #FFFFFF;
-			color: #000000;
-			border: 1px solid #000000;
+			background-color: gray;
+			color: #FFFFFF;
+			border: 1px solid #FFFFFF;
+			transform: scale(1.01);
+			box-shadow: 0 0 5px black;
 		  }
 		  
 
@@ -63,14 +65,14 @@
       /* adds padding to the element */
       padding: 20px;
       /* centers the text */
-      text-align: center;
+      text-align: right;
       /* sets the background color */
       background: #09070f;
       /* sets the color of the text */
       color: white;
     }
 	/* Increase the font size of the h1 element */
-    .header h1 {
+	.header h1 {
       /* sets the font size */
       font-size: 60px;
     }
@@ -96,10 +98,13 @@
 		.navbar li {
 		  float: none;
 		}
+	}
+		
+		  
 	</style>
 </head>
 <body>
-	<h1>About Edwin</h1>
+	<h1 style="text-align: center;">About Me</h1>
       <ul class="navbar">
       <li><a href="./index.html">Home</a></li>
         <li><a  class= 'active'  href="./about.html">About</a></li>
@@ -141,6 +146,7 @@
 		<p>Florida State University, Tallahassee, Florida -                                                                                                                                           May 2021:                                                                                           
 			Bachelor of science in Industrial Engineering                                                                                     </p>
 	</div>
+
 </body>
 </html>
 
