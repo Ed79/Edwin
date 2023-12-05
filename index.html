@@ -1,216 +1,457 @@
 <!DOCTYPE html>
-<HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <!-- specifies the character encoding for the HTML document -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- ensures proper rendering and touch zooming on mobile devices -->
-
-  <title>Home</title>
-  <style type="text/css">
-    @media screen and (max-width: 600px) {
-      .navbar li {
-        display: block;
-        width: 100%;
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edwin Ulysse's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+      @media (max-width: 600px) {
+        .navbar {
+          display: flex;
+          flex-direction: column;
+        }
       }
-    }
-    
-    /* causes the images to stack vertically */
-    .images {
-      display: inline-block; 
-      width: 200px; /* or any other value */
-    }
-    .images img {
-      margin-right: 10px; /* or any other value */
-    }
-        
-    
-    /* increase the font size */
-    .navbar li a {
-      font-size: 20px; 
-      /* increase the padding */
-      padding: 20px; 
-    }
-
-    .navbar {
-      /* removes the bullet points */
-      list-style-type: none;
-      /* removes the margins */
-      margin: 0;
-      /* removes the padding */
-      padding: 0;
-      /* hides content that overflows the container */
-      overflow: hidden;
-      /* sets the background color */
-      background-color: gray;
-    }
-
-    .navbar li {
-      /* causes the element to float to the left */
-      float: left;
-    }
-
-    .navbar li a {
-      /* displays the element as a block-level element */
-      display: block;
-      /* sets the color of the text */
-      color: white;
-      /* centers the text */
-      text-align: center;
-      /* adds padding to the element */
-      padding: 14px 16px;
-      /* removes the underline from the text */
-      text-decoration: none;
-    }
-
-    .navbar li a:hover {
-      /* changes the background color on hover */
-      background-color: gold;
-    }
-
-    .navbar .active {
-      /* sets the background color */
-      background-color: white;
-      /* sets the color of the text */
-      color: Black;
-    }
-
-    {
-      /* ensures that the width and height of the element include any padding and border */
-      box-sizing: border-box;
-    }
-
-    body {
-      /* sets the background color */
-      background-color: white;
-      /* sets the color of the text */
-      color: black;
-      /* sets the font family */
-      font-family: Didot;
-      /* removes the margin */
-      margin: 0;
-    }
-
-    /* Style the header */
-    .header h1{
-      /* adds padding to the element */
-      padding: 20px;
-      /* centers the text */
-      text-align: center;
-      /* sets the background color */
-      background: white;
-      /* sets the color of the text */
-      color: black;
-    }
-
-    /* Increase the font size of the h1 element */
-    .header h1 {
-      /* sets the font size */
-      font-size: 40px;
-    }
-    /* Increase the font size of the h1 element */
-    .header h1 {
-      /* sets the font size */
-      font-size: 60px;
-    }
-    .navbar li a {
-      font-size: 16px; /* increase the font size */
-      padding: 16px; /* increase the padding */
+      body {
+        background-color: #121212; /* Dark background for better readability */
+        color: #E0E0E0; /* Lighter text color for contrast */
+        font-family: Didot;
+        margin: 0;
       }
-    /* sets the font size */
-    h2 {
-      font-size: 30px;
-    }
-
-    /* sets the font size */
-    h5 {
-      font-size: 25px
-
-    }
   
-      /* This block of code sets the font size of all elements with the "p" tag to 22px */
-      p {
-        font-size: 22px;
+      .project-box {
+        width: 80%;
+        margin: 0 auto;
+        border: 1px solid #333; /* Subtle border color for dark mode */
+        box-sizing: border-box;
+        transition: transform 0.2s;
+        background-color: #1E1E1E; /* Dark background for each project box */
+      }
+      
+      .project-box.rotated {
+        transform: rotateY(360deg);
+        transition: transform 0.2s;
+      }
+      
+      .project-box.rotated .project,
+      .project-box.rotated .project-description {
+        color: #E0E0E0; /* Lighter text color for rotated project */
+      }
+      
+      .project-box:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 10px #555; /* Soft shadow for hover effect */
+      }
+      
+      .project,
+      .project-description {
+        color: #E0E0E0; /* Lighter text color for better readability */
+        font-size: 1.5em;
+        text-align: center;
+        margin: 20px 0;
+        cursor: pointer;
+      }
+      
+      .project-media img,
+      .project-media video {
+        width: 80%;
+        height: auto;
+      }
+      
+      .navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333; /* Darker navbar color */
+      }
+      
+      .navbar li {
+        float: left;
+      }
+      
+      .navbar li a {
+        display: block;
+        color: #E0E0E0; /* Lighter text color for navbar links */
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      .navbar li a:hover {
+        background-color: #555; /* Subtle hover effect for navbar */
+      }
+
+      .navbar .active {
+        background-color: #1E1E1E;
+        color: #E0E0E0;
+      }
+      
+      .flipbook-container {
+        text-align: center;
       }
     
-      /* This block of code sets a transition effect for all elements with the "img" tag. The effect will take 0.5 seconds to complete, and will be a smooth easing transition. */
-      img {
-        transition: transform 0.5s ease;
+      .flipbook {
+        max-width: 300px;
+        max-height: 400px;
+        margin: auto;
       }
     
-      /* This block of code sets a transformation effect for all elements with the "img" tag when they are hovered over. The effect will scale the image up by 10% */
-      img:hover {
-        
-          transform: scale(1.01);
-          box-shadow: 0 0 10px black;
-          border-radius: 10px;
-        
-        
+      .flipbook-page img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
       }
-      p:hover {
-        transform: scale(1);
-    
-        box-shadow: 0 0 10px black;
-      }
+      
     </style>
-    <!-- This is the opening tag for the HTML document -->
-    <html>
-    <!-- This is the head element, which contains metadata about the HTML document -->
-    <head>
-    <!-- This is the closing tag for the head element -->
-    </head>
-    <!-- This is the body element, which contains the content that is displayed in the browser -->
-    <body>
-      <!-- This is a header element, which contains a div element with a class of "header" -->
-      <header>
+  </head>
+</head>
+
+<body>
+    <header>
         <div class="header">
-          <!-- This is a h1 element, which is used to display a main heading on the page -->
-          <h1>Edwin Ulysse</h1>
+            <h1>Edwin Ulysse</h1>
         </div>
-      </header>
-    <!-- This is a div element with a class of "container" -->
-    <div class="container">
-      <!-- This is an unordered list element with a class of "navbar" -->
-      <ul class="navbar">
-        <!-- This is a list item element containing a link element with a class of "active" and a href attribute linking to "./index.html" -->
-        <li><a class='active' href="./index.html">Home</a></li>
-        <!-- This is a list item element containing a link element with a href attribute linking to "./about.html" -->
-        <li><a href="./about.html">About</a></li>
-        <!-- This is a list item element containing a link element with a href attribute linking to "./projects.html" -->
-        <li><a href="./projects.html">Projects</a></li>
-        <!-- This is a list item element containing a link element with a href attribute linking to "./contact.html" -->
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-    <!-- This is a div element with a class of "row" -->
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+   <div id="home" class="section">
+    
+
+   
     <div class="row">
-      <!-- This is a div element with a class of "side" -->
-      <div class="side">
-      <!-- This is a div element with a class of "main" -->
-      <div class="main">
-        <!-- This is a h2 element, which is used to display a secondary heading on the page -->
-        <h2> Who Am I:</h2>
-    <!-- This is a div element with a class of "images" -->
-    <div class="images">
-      <!-- This is an image element with a src attribute linking to an image file, an alt attribute providing alternative text for the image, and a style attribute setting the width of the image to 400px -->
-      <img src="dsc_2054-PhotoRoom (3).png" alt="Image 1" style="width: 400px" >
-    <!-- This is an image element with a src attribute linking to an image file, an alt attribute providing alternative text for the image, and a style attribute setting the width of the image to 400px -->
-    <img src="Florida-State-University-Symbol.png" alt="Image 2" style="width: 400px">
-    <!-- This is an image element with a src attribute linking to an image file, an alt attribute providing alternative text for the image, and a style attribute setting the width of the image to 400px -->
-    <img src="wp10293359.png" alt="Image 3" style="width: 400px">
-    <!-- This is an image element with a src attribute linking to an image file, an alt attribute providing alternative text for the image, and a style attribute setting the width of the image to 400px -->
-    <img src="haiti.png" alt="Image 4" style="width: 400px">
-    </div>
-    <!-- This is a p element, which is used to display a paragraph of text -->
-    <p>Hi! I'm an Engineer by trade with experience in supply chain from FL, but I am currently living in Cincinnati, Ohio. I have always been passionate about engineering, creating, and tech entrepreneurship. My goal is to continuously blend design concepts with innovative ideas and technological advancements to positively impact consumers. Please take a look at some of my past work and experience, and feel free to contact me if you would like to collaborate, hire, or partner up.
-    </p>
-    <!-- This is a line break element, which is used to add a line break in the text -->
-    <br>
+        <div class="side">
+            <!-- Add any additional content you want on the side of the main home content -->
+        </div>
+        <div class="main">
+            
+           <!-- Add this section where you want the flipbook to appear -->
+<div class="flipbook-container">
+  <div class="flipbook">
+    <div class="flipbook-page">
+      <img src="dsc_2054-PhotoRoom (3).png" alt="Image 1">
+  </div>
+  <div class="flipbook-page">
+      <img src="Florida-State-University-Symbol.png" alt="Image 2">
+  </div>
+  <div class="flipbook-page">
+      <img src="wp10293359.png" alt="Image 3">
+  </div>
+  <div class="flipbook-page">
+      <img src="haiti.png" alt="Image 4">
+  </div>
+  <div class="flipbook-page">
+    <img src="IMG_0827.JPG" alt="Image 5">
+</div>
+<div class="flipbook-page">
+  <img src="IMG_.png" alt="Image 6">
+</div>
+<div class="flipbook-page">
+  <img src="DSCN1518.JPG" alt="Image 7">
+</div>
+</div>
+      <!-- Add more pages as needed -->
+  
+  <button onclick="previousPage()">Previous</button>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+            <div class="project-box">
+            <p>Hello! I'm an Engineer with a multifaceted background, not only skilled in product design, app development, and adept in supply chain management and leading both digital and physical product initiatives. Based in West Palm Beach, with my roots in Florida, I blend my passion for engineering, creativity, and tech entrepreneurship with strong leadership and management abilities. My approach involves harmonizing innovative design with advanced technology to deliver impactful solutions. Besides my professional expertise, I'm an ardent cyclist, traveler, and hiker, advocating for a lifestyle that balances tech-savviness with outdoor adventures. My portfolio is a testament to my journey, showcasing complex engineering projects, effective supply chain strategies, and my capability to lead and manage diverse teams successfully. If you're intrigued by my blend of technical skills and leadership qualities, I welcome collaborations, employment opportunities, or partnerships. Let's connect and explore how we can drive success together!</p>
+        </div>
       </div>
     </div>
-    <!-- This is the closing tag for the body element -->
-    </body>
-    <!-- This is the closing tag for the HTML document -->
-    </html>
-    
-    
-    
+</div>
+
+<script>
+  let currentPage = 0;
+  const pages = document.querySelectorAll('.flipbook-page');
+  
+  function showPage(index) {
+      pages.forEach((page, i) => {
+          page.style.display = i === index ? 'block' : 'none';
+      });
+  }
+  
+  function nextPage() {
+      if (currentPage < pages.length - 1) {
+          currentPage++;
+          showPage(currentPage);
+      }
+  }
+  
+  function previousPage() {
+      if (currentPage > 0) {
+          currentPage--;
+          showPage(currentPage);
+      }
+  }
+  
+  // Initialize the first page
+  showPage(currentPage);
+  </script>
+  
+
+   <div id="about" class="section">
+    <h1 style="text-align: center;">About Me</h1>
+    <div style="text-align: center;">
+
+    <div class="project-box">
+      <h2>Professional Experience</h2>
+      <p>Summary: As a supply chain and operations project leader, I have broad knowledge of product supply processes and the end-to-end supply chain. I possess strong project management skills and excel at collaborating with cross-functional teams to drive results. My experience includes managing and overseeing in-store display projects at Procter & Gamble, where I worked with the Fabric Care and Baby Care categories in North America. My responsibilities included managing the critical path schedule of multiple display merchandising projects, working directly with a cross-functional team of customers, external material suppliers, engineers, supply chain planners, and marketing/brand specialists, and using data visualization tools to track inventory and orders across North America. I identified change opportunities, managed risks within the project lifecycle, and ensured that tasks were completed on time to meet operational efficiency goals. I am skilled at quickly understanding and mastering new systems and processes.</p>
+      <p>Procter & Gamble:                                                                                                                                                                          Merchandising Solutions Operation Project Manager
+        
+      </p>
+      <p>Procter & Gamble:       
+      Supply Chain Management Intern
+      </p>
+      <p>High Performance Material Institute (HPMI): R&D Intern                                                                                                                      
+       
+        
+        </p>
+    </div>
+    <div class="project-box">
+      <h2>Current Skills</h2>
+      <p>SOLIDWORKS </p> <p>Six Sigma Green Belt </p> 
+        <p> Bilingual (Creole)   </p>
+        <p> Power BI/Power Query </p>
+        <p> Excel/VBA</p>
+        <p> SAP ERP</p>
+        <p> Data Analytics/Visualization</p>
+        <p> Augmented Reality Design </p>
+        <p> HTML </p>
+        <p> CSS </p>
+        <p> Python</p>
+      
+    </div>
+    <div class="project-box">
+      <h2>Passions and Hobbies</h2>
+      <p> Working out, Traveling, Hiking, Creating, Basketball, Innovating, Mentoring, Reading</p>
+    </div>
+    <div class="project-box">
+      <h2>Educational Background</h2>
+      <p>Florida State University, Tallahassee, Florida -                                                                                                                                           May 2021:                                                                                           
+        Bachelor of science in Industrial Engineering                                                                                     </p>
+    </div>
+  </div>
+</div>
+
+<div id="projects" class="section">
+  <!-- Add a container for the projects -->
+  <div class="project-container">
+    <!-- Add a box for each project -->
+    <div class="project-box">
+      <!-- Add a header for the project -->
+      <h2 class="project">3D Printing</h2>
+      <!-- Add a button for the project -->
+     
+      <!-- Add a description for the project -->
+      <p class="project-description" style="visibility: visible;">
+        From 2019-2021 I designed and 3D printed custom phone cases for individuals and processed them through my own E-commerce site called Transcending Cases, please see some images below:
+      </p>
+      <!-- Add a section for images or videos for the project -->
+
+      
+      <div class="project-media" style="visibility: visible;">
+        <!-- Add an image or video for the project -->
+        <img src="https://firebasestorage.googleapis.com/v0/b/testing-54300.appspot.com/o/CFEAF1E8-6401-46CA-BBFF-E53A3ED1C6B3.JPG?alt=media&token=a215266b-2742-42b9-ba6e-72e4b37d1f77" alt="3D Printing project" style="width: 200px; height: 200px; object-fit: cover;">
+        <img src="https://firebasestorage.googleapis.com/v0/b/testing-54300.appspot.com/o/D3C39664-CAF3-42CF-8206-BB4288F62420.JPG?alt=media&token=3edd1102-6785-4a5f-842c-80ccd7053f5c" alt="3D Printing project" style="width: 200px; height: 200px; object-fit: cover;">
+        <img src="https://firebasestorage.googleapis.com/v0/b/testing-54300.appspot.com/o/PhotoRoom.app%202020-04-10%2010%3A45%3A40-0400-1586529940.790693.jpg?alt=media&token=381e58e8-ceb4-49a0-bf79-c633fcdf7e5c" alt="3D Printing project" style="width: 200px; height: 200px; object-fit: cover;">
+        <img src="https://firebasestorage.googleapis.com/v0/b/testing-54300.appspot.com/o/PhotoRoom.app%202020-04-19%2000%3A20%3A29-0400-1587270029.91436.jpg?alt=media&token=9dc7f601-404b-40fc-b525-af359cf4ebb8" alt="3D Printing project" style="width: 200px; height: 200px; object-fit: cover;">
+      </div>
+
+
+      </div>
+  
+    <!-- Add a box for the Augmented Reality project -->
+    <div class="project-box">
+      <h2 class="project">Augmented Reality</h2>
+
+      <p class="project-description" style="visibility: visible;">
+        Below are some AR ( Augmented reality ) projects that I have worked on. 
+        1. The first project was designed in unity. I implemented facial recognition to allow users to try on different glasses before purchasing the glasses.
+        2.The second project was designed in Unity. I created an image recognition for two pictures where a video is triggered when the user places their camera on the image.
+       
+
+       
+       
+       
+      </p>
+      <div class="project-media" style="visibility: visible;">
+        
+        <video src="https://firebasestorage.googleapis.com/v0/b/testing-54300.appspot.com/o/RPReplay_Final1650823274%202.mov?alt=media&token=d790bc10-2a5b-4a55-bbcd-4b4142d55be3" controls style="width: 350px; height: 350px;"></video>
+        
+        <video src="https://firebasestorage.googleapis.com/v0/b/testing-54300.appspot.com/o/ScreenRecording_02-21-2022%2014-57-32_1.mov?alt=media&token=9bd794d3-ba5f-440b-a51a-6c4e103a6adf" controls style="width: 350px; height: 350px;"></video>
+  
+      </div>
+      </div>
+
+      <!-- Add a box for the Web Development project -->
+<div class="project-box">
+<h2 class="project">Web Development</h2>
+
+<p class="project-description" style="visibility: visible;">
+ This entire website was coded by me in HTML and CSS.
+</p>
+<p class="project-description" style="visibility: visible;">
+  This website was developed by in HTML, CSS, and Javascript. 
+  <a href="https://www.inhibitpro.com/">
+   //www.inhibitpro.com/
+  </a>
+  </p>
+  <p class="project-description" style="visibility: visible;">
+    This website was developed by in HTML, CSS, and Javascript. 
+    <a href="https://www.techscending.com/">
+      Techscending.com 
+    </a>
+    </p>
+<div class="project-media" style="visibility: visible;">
+ 
+</div>
+</div>
+
+<!-- Add a box for the Web Development project -->
+<div class="project-box">
+<h2 class="project">SAS ( Software As a Service )</h2>
+
+<p class="project-description" style="visibility: visible;">
+I am currently working on an injury preventing app, updates comming soon!
+
+</p>
+
+
+<div class="project-media" style="visibility: visible;">
+ 
+</div>
+</div>
+
+<div class="project-box">
+<h2 class="project">3D Rendering</h2>
+
+<p class="project-description" style="visibility: visible;">
+  Below are some AR projects that were rendered in Blender. Both projects are hats that were designed for a clothing brand to add to their website to create a more immersive experience for their customers.
+</p>
+
+<div style="float: left; margin-right: 20px;">
+  <style>
+    .augmented-reality-design {
+      width: 400px;
+      height: 400px;
+      border: none;
+    }
+  </style>
+
+  <iframe src="https://metal-wild-makemake.glitch.me/" class="augmented-reality-design"></iframe>
+
+<div style="float: left;">
+  <style>
+    .augmented-reality-design {
+      width: 400px;
+      height: 400px;
+      border: none;
+    }
+  </style>
+
+  <iframe src="https://curved-hallowed-pajama.glitch.me/" class="augmented-reality-design"></iframe>
+
+
+
+<div class="project-media" style="visibility: visible;">
+
+
+</div>
+</div>
+<!-- Add a script for the toggle functions -->
+<script>
+function toggle3DPrintingDescription() {
+// Get the description and media elements for the 3D Printing project
+var description = document.querySelector('.project-box:nth-of-type(1) .project-description');
+var media = document.querySelector('.project-box:nth-of-type(1) .project-media');
+
+// Toggle the visibility of the description and media elements
+if (description.style.visibility === 'hidden') {
+  description.style.visibility = 'visible';
+  media.style.visibility = 'visible';
+} else {
+  description.style.visibility = 'hidden';
+  media.style.visibility = 'hidden';
+}
+}
+
+/*function toggleAugmentedRealityDescription() {
+// Get the description and media elements for the Augmented Reality project
+var description = document.querySelector('.project-box:nth-of-type(2) .project-description');
+var media = document.querySelector('.project-box:nth-of-type(2) .project-media');
+// Toggle the visibility of the description and media elements
+if (description.style.visibility === 'hidden') {
+description.style.visibility = 'visible';
+media.style.visibility = 'visible';
+} else {
+description.style.visibility = 'hidden';
+media.style.visibility = 'hidden';
+}
+}
+
+//function toggleWebDevelopmentDescription() {
+// Get the description and media elements for the Web Development project
+var description = document.querySelector('.project-box:nth-of-type(3) .project-description');
+var media = document.querySelector('.project-box:nth-of-type(3) .project-media');
+
+// Toggle the visibility of the description and media elements
+if (description.style.visibility === 'hidden') {
+description.style.visibility = 'visible';
+media.style.visibility = 'visible';
+} else {
+description.style.visibility = 'hidden';
+media.style.visibility = 'hidden';
+}
+}
+
+function toggle3DRenderingDescription() {
+// Get the description and media elements for the 3D Rendering project
+var description = document.querySelector('.project-box:nth-of-type(4) .project-description');
+var media = document.querySelector('.project-box:nth-of-type(4) .project-media');
+// Toggle the visibility of the description and media elements
+if (description.style.visibility === 'hidden') {
+description.style.visibility = 'visible';
+media.style.visibility = 'visible';
+} else {
+description.style.visibility = 'hidden';
+media.style.visibility = 'hidden';
+}
+}
+</script>
+
+
+<div id="contact" class="section">
+  <div class="container">
+    <div>
+      <h1 style="text-align: center;">Contact Me</h1>
+      <div style="text-align: center;">
+        <p>If you need to reach me, please contact me using one of the methods below. Resume is available upon request.</p>
+        <h3>Social Media</h3>
+        <a href="https://www.linkedin.com/in/edwinulysse">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png" alt="LinkedIn logo" width="30" height="30">
+        </a>
+        <a href="https://twitter.com/EdsPerspective">
+          <img src="https://firebasestorage.googleapis.com/v0/b/testing-54300.appspot.com/o/Screen%20Shot%202022-12-17%20at%209.52.45%20PM.png?alt=media&token=c62a0049-b38c-4981-8641-494c1c43f743" width="30" height="30">
+        </a>
+        <h3>Phone and Email</h3>
+        <img src="https://firebasestorage.googleapis.com/v0/b/testing-54300.appspot.com/o/Screen%20Shot%202022-12-17%20at%2010.15.42%20PM.png?alt=media&token=c32f3617-5d92-499b-afec-df3be63b8324" alt="Handshake" width="200" height="200" />
+        <p>Stay in touch!</p>
+        <p><strong>Email:</strong> Ulysseedwin@gmail.com</p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+
+
