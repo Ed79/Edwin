@@ -102,6 +102,29 @@
         max-height: 100%;
         object-fit: contain;
       }
+     .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #ccc; 
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
       
     </style>
   </head>
@@ -215,20 +238,31 @@
         
         </p>
     </div>
-    <div class="project-box">
-      <h2>Current Skills</h2>
-      <p>SOLIDWORKS </p> <p>Six Sigma Green Belt </p> 
-        <p> Bilingual (Creole)   </p>
-        <p> Power BI/Power Query </p>
-        <p> Excel/VBA</p>
-        <p> SAP ERP</p>
-        <p> Data Analytics/Visualization</p>
-        <p> Augmented Reality Design </p>
-        <p> HTML </p>
-        <p> CSS </p>
-        <p> Python</p>
-      
+            <p>CSS</p>
+        <p>Python</p>
+        <p>SwiftUI</p>
+        <p>JavaScript</p>
     </div>
+    <button class="accordion">Development</button>
+    <div class="panel">
+        <p>IOS Development</p>
+        <p>Web Development</p>
+        <p>Physical Product Development</p>
+        <p>AR Development</p>
+    </div>
+    <button class="accordion">Management</button>
+    <div class="panel">
+        <p>Project Management</p>
+        <p>Program Management</p>
+        <p>Product Management</p>
+    </div>
+    <button class="accordion">Analytical Skills</button>
+    <div class="panel">
+        <p>Six Sigma Green Belt</p>
+        <p>Data Analytics/Visualization</p>
+    </div>
+    <!-- Add more categories and skills as needed -->
+</div>
     <div class="project-box">
       <h2>Passions and Hobbies</h2>
       <p> Working out, Traveling, Hiking, Creating, Basketball, Innovating, Mentoring, Reading</p>
@@ -461,6 +495,23 @@ media.style.visibility = 'hidden';
     </div>
   </div>
 </div>
+<script>
+    // JavaScript for accordion functionality
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
     <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
