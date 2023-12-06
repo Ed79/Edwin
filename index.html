@@ -593,10 +593,10 @@ media.style.visibility = 'hidden';
         acc[i].addEventListener("click", function() {
             this.classList.toggle("active");
             var panel2 = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
+            if (panel2.style.display === "block") {
+                panel2.style.display = "none";
             } else {
-                panel.style.display = "block";
+                panel2.style.display = "block";
             }
         });
     }
