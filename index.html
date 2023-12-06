@@ -125,7 +125,18 @@
             background-color: black;
             overflow: hidden;
         }
-     
+         .accordion2 {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
     
 
     </style>
@@ -188,8 +199,8 @@
 
 <div class="project-box">
     <h2>About Me</h2>
-    <button class="accordion">Background</button>
-    <div class="panel">
+    <button class="accordion2">Background</button>
+    <div class="panel2">
         <p>Hello! I'm an Engineer with a multifaceted background, not only skilled in:</p>
         <ul>
             <li>Product design</li>
@@ -199,12 +210,12 @@
         </ul>
         <p>Based in West Palm Beach, with my roots in Florida, I blend my passion for engineering, creativity, and tech entrepreneurship with strong leadership and management abilities.</p>
     </div>
-    <button class="accordion">Approach</button>
-    <div class="panel">
+    <button class="accordion2">Approach</button>
+    <div class="panel2">
         <p>My approach involves harmonizing innovative design with advanced technology to deliver impactful solutions.</p>
     </div>
-    <button class="accordion">Interests</button>
-    <div class="panel">
+    <button class="accordion2">Interests</button>
+    <div class="panel2">
         <p>Besides my professional expertise, I'm an ardent:</p>
         <ul>
             <li>Cyclist</li>
@@ -213,8 +224,8 @@
         </ul>
         <p>Advocating for a lifestyle that balances tech-savviness with outdoor adventures.</p>
     </div>
-    <button class="accordion">Portfolio</button>
-    <div class="panel">
+    <button class="accordion2">Portfolio</button>
+    <div class="panel2">
         <p>My portfolio is a testament to my journey, showcasing:</p>
         <ul>
             <li>Complex engineering projects</li>
@@ -222,8 +233,8 @@
             <li>My capability to lead and manage diverse teams successfully</li>
         </ul>
     </div>
-    <button class="accordion">Opportunities</button>
-    <div class="panel">
+    <button class="accordion2">Opportunities</button>
+    <div class="panel2">
         <p>If you're intrigued by my blend of technical skills and leadership qualities, I welcome:</p>
         <ul>
             <li>Collaborations</li>
@@ -565,6 +576,23 @@ media.style.visibility = 'hidden';
         acc[i].addEventListener("click", function() {
             this.classList.toggle("active");
             var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
+    <script>
+    // JavaScript for accordion functionality
+    var acc = document.getElementsByClassName("accordion2");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel2 = this.nextElementSibling;
             if (panel.style.display === "block") {
                 panel.style.display = "none";
             } else {
