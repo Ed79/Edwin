@@ -125,7 +125,27 @@
             background-color: black;
             overflow: hidden;
         }
-      
+      .project-box {
+    text-align: center;
+}
+
+.centered-content {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 400px; /* Adjust the width as needed */
+}
+
+.centered-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.centered-content ul li {
+    text-align: left;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+}
+
     </style>
   </head>
 </head>
@@ -184,58 +204,67 @@
   <button onclick="nextPage()">Next</button>
 </div>
 
-          <div class="project-box">
-                <div style="text-align: center;">
+   <div class="project-box">
     <h2>About Me</h2>
-    <p>Hello! I'm an Engineer with a diverse skill set:</p>
-    <ul>
-        <li>Product design</li>
-        <li>App development</li>
-        <li>Supply chain management</li>
-        <li>Leading digital and physical product initiatives</li>
-    </ul>
-    <p>I'm based in West Palm Beach, Florida, and I'm passionate about:</p>
-    <ul>
-        <li>Engineering</li>
-        <li>Creativity</li>
-        <li>Tech entrepreneurship</li>
-    </ul>
-    <p>My approach involves:</p>
-    <ul>
-        <li>Innovative design</li>
-        <li>Advanced technology</li>
-        <li>Delivering impactful solutions</li>
-    </ul>
-    <p>Outside of work, I enjoy:</p>
-    <ul>
-        <li>Cycling</li>
-        <li>Traveling</li>
-        <li>Hiking</li>
-    </ul>
-    <p>I advocate for a balanced lifestyle:</p>
-    <ul>
-        <li>Tech-savviness</li>
-        <li>Outdoor adventures</li>
-    </ul>
-    <p>My portfolio showcases:</p>
-    <ul>
-        <li>Complex engineering projects</li>
-        <li>Effective supply chain strategies</li>
-        <li>Successful team leadership</li>
-    </ul>
-    <p>If you're intrigued, I'm open to:</p>
-    <ul>
-        <li>Collaborations</li>
-        <li>Employment opportunities</li>
-        <li>Partnerships</li>
-    </ul>
-    <p>Let's connect and explore how we can achieve success together!</p>
+    <div class="centered-content">
+        <p>Hello! I'm an Engineer with a diverse skill set:</p>
+        <ul>
+            <li>Product design</li>
+            <li>App development</li>
+            <li>Supply chain management</li>
+            <li>Leading digital and physical product initiatives</li>
+        </ul>
+    </div>
+    <div class="centered-content">
+        <p>I'm based in West Palm Beach, Florida, and I'm passionate about:</p>
+        <ul>
+            <li>Engineering</li>
+            <li>Creativity</li>
+            <li>Tech entrepreneurship</li>
+        </ul>
+    </div>
+    <div class="centered-content">
+        <p>My approach involves:</p>
+        <ul>
+            <li>Innovative design</li>
+            <li>Advanced technology</li>
+            <li>Delivering impactful solutions</li>
+        </ul>
+    </div>
+    <div class="centered-content">
+        <p>Outside of work, I enjoy:</p>
+        <ul>
+            <li>Cycling</li>
+            <li>Traveling</li>
+            <li>Hiking</li>
+        </ul>
+    </div>
+    <div class="centered-content">
+        <p>I advocate for a balanced lifestyle:</p>
+        <ul>
+            <li>Tech-savviness</li>
+            <li>Outdoor adventures</li>
+        </ul>
+    </div>
+    <div class="centered-content">
+        <p>My portfolio showcases:</p>
+        <ul>
+            <li>Complex engineering projects</li>
+            <li>Effective supply chain strategies</li>
+            <li>Successful team leadership</li>
+        </ul>
+    </div>
+    <div class="centered-content">
+        <p>If you're intrigued, I'm open to:</p>
+        <ul>
+            <li>Collaborations</li>
+            <li>Employment opportunities</li>
+            <li>Partnerships</li>
+        </ul>
+    </div>
+    <p class="centered-content">Let's connect and explore how we can achieve success together!</p>
 </div>
 
-      </div>
-    </div>
-</div>
-</div>
 <script>
   let currentPage = 0;
   const pages = document.querySelectorAll('.flipbook-page');
@@ -266,7 +295,7 @@
   
 
    <div id="about" class="section">
-    <h1 style="text-align: center;">About Me</h1>
+ 
     <div style="text-align: center;">
 
     <div class="project-box">
