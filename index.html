@@ -188,45 +188,51 @@
 
 <div class="project-box">
     <h2>About Me</h2>
-
-    <button class="accordion">Background and Skills</button>
+    <button class="accordion">Background</button>
     <div class="panel">
         <p>Hello! I'm an Engineer with a multifaceted background, not only skilled in:</p>
         <ul>
             <li>Product design</li>
             <li>App development</li>
             <li>Supply chain management</li>
-            <li>Leading both digital and physical product initiatives</li>
+            <li>Leading digital and physical product initiatives</li>
         </ul>
-
-        <p>Based in West Palm Beach, with my roots in Florida, I blend my passion for engineering, creativity, and tech entrepreneurship with strong leadership and management abilities. My approach involves harmonizing innovative design with advanced technology to deliver impactful solutions.</p>
-
-        <p>Besides my professional expertise, I'm an ardent cyclist, traveler, and hiker, advocating for a lifestyle that balances tech-savviness with outdoor adventures.</p>
-
-        <p>My portfolio is a testament to my journey, showcasing complex engineering projects, effective supply chain strategies, and my capability to lead and manage diverse teams successfully.</p>
-
-        <p>If you're intrigued by my blend of technical skills and leadership qualities, I welcome collaborations, employment opportunities, or partnerships. Let's connect and explore how we can drive success together!</p>
+        <p>Based in West Palm Beach, with my roots in Florida, I blend my passion for engineering, creativity, and tech entrepreneurship with strong leadership and management abilities.</p>
+    </div>
+    <button class="accordion">Approach</button>
+    <div class="panel">
+        <p>My approach involves harmonizing innovative design with advanced technology to deliver impactful solutions.</p>
+    </div>
+    <button class="accordion">Interests</button>
+    <div class="panel">
+        <p>Besides my professional expertise, I'm an ardent:</p>
+        <ul>
+            <li>Cyclist</li>
+            <li>Traveler</li>
+            <li>Hiker</li>
+        </ul>
+        <p>Advocating for a lifestyle that balances tech-savviness with outdoor adventures.</p>
+    </div>
+    <button class="accordion">Portfolio</button>
+    <div class="panel">
+        <p>My portfolio is a testament to my journey, showcasing:</p>
+        <ul>
+            <li>Complex engineering projects</li>
+            <li>Effective supply chain strategies</li>
+            <li>My capability to lead and manage diverse teams successfully</li>
+        </ul>
+    </div>
+    <button class="accordion">Opportunities</button>
+    <div class="panel">
+        <p>If you're intrigued by my blend of technical skills and leadership qualities, I welcome:</p>
+        <ul>
+            <li>Collaborations</li>
+            <li>Employment opportunities</li>
+            <li>Partnerships</li>
+        </ul>
+        <p>Let's connect and explore how we can drive success together!</p>
     </div>
 </div>
-
-<script>
-    // JavaScript to toggle the accordion
-    var accordions = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < accordions.length; i++) {
-        accordions[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-        });
-    }
-</script>
-
 
 
 <script>
