@@ -2,8 +2,10 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Changed to a modern sans-serif font */
     scroll-behavior: smooth;
+    background-color: #1a1a1a; /* Dark gray background */
+    color: #f0f0f0; /* Light gray text color */
 }
 
 h1, h2, h3, p {
@@ -49,6 +51,33 @@ h1, h2, h3, p {
     background-color: #555;
 }
 
+/* Projects Section */
+.projects-container {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 20px;
+ padding: 20px;
+}
+
+.project-item {
+ background-color: #2a2a2a; /* Slightly lighter dark for project cards */
+ border: 1px solid #444; /* Subtle border */
+ padding: 20px;
+ border-radius: 8px;
+ transition: transform 0.3s ease-in-out;
+}
+
+.project-item:hover {
+ transform: translateY(-5px); /* Simple hover effect */
+}
+
+.project-item h3 {
+ margin-top: 0;
+ color: #00bfff; /* Cool blue accent color */
+}
+
+.project-item p {
+}
 /* Section Styles */
 .section {
     padding: 20px;
